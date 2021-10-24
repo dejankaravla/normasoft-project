@@ -1,56 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import SecondPage from "./Pages/SecondPage/SecondPage";
+import TagPage from "./Pages/TagPage/TagPage";
+import ScrollToTop from "./ScrollToTop";
+
+import "./App.css";
 
 function App() {
+  const tagName = useSelector((state) => state.posts.tagName);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Router>
+        <ScrollToTop />
+        <Switch>
+          <Route exact path="/id">
+            <SecondPage />
+          </Route>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path={`/${tagName}`}>
+            <TagPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

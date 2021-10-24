@@ -1,0 +1,112 @@
+.SecondPage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  gap: 50px;
+}
+
+.SecondPage__card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.SecondPage__cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SecondPage__ownerInfo {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+}
+
+.SecondPage__ownerInfo img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.SecondPage__ownerInfoDetails {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.SecondPage__ownerInfoText {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.SecondPage__ID {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.SecondPage__bottomContainer {
+  padding: 10px;
+}
+
+.SecondPage__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.SecondPage__socialLike {
+  display: flex;
+  gap: 10px;
+}
+
+.SecondPage__socialLike svg {
+  cursor: pointer;
+  color: slateblue;
+}
+
+.SecondPage__socialTags {
+  display: flex;
+  gap: 10px;
+}
+
+.SecondPage__socialTags a {
+  background-color: orangered;
+  color: white;
+  text-decoration: none;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.SecondPage__postDate {
+  opacity: 0.5;
+  padding: 10px;
+}
+
+.SecondPage__comment {
+  display: flex;
+  padding: 10px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.SecondPage__comment input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+.SecondPage__comment button {
+  border: none;
+  background-color: transparent;
+  color: slateblue;
+  font-weight: bold;
+  cursor: pointer;
+}

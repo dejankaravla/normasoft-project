@@ -1,0 +1,82 @@
+.LandingPage {
+  background-color: #fafafa;
+}
+
+.LandingPage h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.LandingPage__link {
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.LandingPage__link a,
+.LandingPage__link button {
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 10px 5px;
+  transition: 0.5s;
+  background-color: #4267b2;
+  cursor: pointer;
+}
+
+.LandingPage__link a:hover,
+.LandingPage__link button:hover {
+  opacity: 0.9;
+}
+
+.LandingPage__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+}
+
+.LandingPage__card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.LandingPage__card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.LandingPage__cardHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.LandingPage__ownerInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.LandingPage__ownerInfo img {
+  border-radius: 50%;
+  max-width: 50px;
+}
+
+.LandingPage__ownerInfoDetails {
+  display: flex;
+  gap: 5px;
+}
+
+.LandingPage__postDate {
+  padding: 15px 0 5px 10px;
+}
+.LandingPage__postDate p {
+  font-size: 12px;
+}

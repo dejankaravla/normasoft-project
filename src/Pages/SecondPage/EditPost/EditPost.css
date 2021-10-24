@@ -1,0 +1,19 @@
+.EditPost button {
+  background-color: #4267b2;
+  color: white;
+  padding: 5px 10px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.EditPost button:hover {
+  opacity: 0.9;
+}
+
+.EditPost__form {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

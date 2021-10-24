@@ -1,0 +1,64 @@
+.LandingPageModal__card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  background-color: white;
+}
+
+.LandingPageModal__ownerInfoText {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  font-size: 13px;
+  gap: 10px;
+}
+
+.LandingPageModal__ownerInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.LandingPageModal__ownerInfo img {
+  border-radius: 50%;
+  max-width: 30px;
+}
+.LandingPageModal__ownerInfoDetails {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.LandingPageModal__social {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.LandingPageModal__socialLike {
+  display: flex;
+  gap: 10px;
+}
+.LandingPageModal__socialLike svg {
+  cursor: pointer;
+  color: slateblue;
+}
+
+.LandingPageModal__socialTags {
+  display: flex;
+  gap: 10px;
+}
+
+.LandingPageModal__socialTags a {
+  background-color: orangered;
+  color: white;
+  text-decoration: none;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.LandingPageModal__postDate {
+  padding: 10px 20px;
+  opacity: 0.5;
+}
