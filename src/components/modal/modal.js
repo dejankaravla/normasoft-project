@@ -38,7 +38,7 @@ export default function BasicModal() {
   const handleClose = () => dispatch(modalHandler(false));
 
   return (
-    <div>
+    <div className="LandingPage__modal">
       <Modal
         open={modal}
         s

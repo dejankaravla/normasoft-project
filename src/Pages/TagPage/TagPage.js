@@ -7,7 +7,6 @@ import { selectPost, modalHandler } from "../../features/posts";
 function TagPage() {
   const tagsData = useSelector((state) => state.posts.tagsData);
   const tagName = useSelector((state) => state.posts.tagName);
-  const selectedPost = useSelector((state) => state.posts.selectedPost);
   const dispatch = useDispatch();
   const handleOpen = (data) => (dispatch(modalHandler(true)), dispatch(selectPost(data)));
   console.log(tagsData);

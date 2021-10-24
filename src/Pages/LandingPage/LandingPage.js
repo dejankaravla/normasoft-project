@@ -18,15 +18,13 @@ function LandingPage() {
   const dispatch = useDispatch();
   const handleOpen = (data) => (dispatch(modalHandler(true)), dispatch(selectPost(data)));
 
-  console.log(new Date());
-
+  // Geting posts from API
   useEffect(() => {
     axios.get("https://dummyapi.io/data/v1/post?limit=50", { headers: { "app-id": appID } }).then((res) => {
       const responseData = res.data.data;
       responseData.sort((a, b) => {
         return new Date(a.publishDate) - new Date(b.publishDate);
       });
-
       responseData.map((res) => {
         const newCommentsArray = { comments: [] };
         const assignNewCommentsArray = Object.assign(res, newCommentsArray);

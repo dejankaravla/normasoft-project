@@ -1,0 +1,28 @@
+.NewPost button {
+  background-color: #4267b2;
+  color: white;
+  padding: 5px 10px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.NewPost button:hover {
+  opacity: 0.9;
+}
+
+.NewPost__form {
+  text-align: center;
+}
+
+.NewPost__formContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+}
+
+.NewPost__formInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

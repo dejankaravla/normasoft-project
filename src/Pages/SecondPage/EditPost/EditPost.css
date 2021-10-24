@@ -11,8 +11,17 @@
 }
 
 .EditPost__form {
-  width: 100%;
-  align-items: center;
+  text-align: center;
+}
+
+.EditPost__formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.EditPost__formInfo {
   display: flex;
   flex-direction: column;
   gap: 20px;

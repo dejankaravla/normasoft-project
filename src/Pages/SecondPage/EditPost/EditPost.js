@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import Modal from "@mui/material/Modal";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getNewId, getNewText, getNewImageUrl } from "../../../features/editPost";
+import { getNewId, getNewText, getNewImageUrl, getNewTag1, getNewTag2, getNewTag3 } from "../../../features/editPost";
 
 import { savePosts } from "../../../features/posts";
 
@@ -21,7 +21,7 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 20,
+  p: 15,
 };
 
 function EditPost({ post, i }) {
@@ -33,6 +33,9 @@ function EditPost({ post, i }) {
   const newId = useSelector((state) => state.editPosts.newId);
   const newText = useSelector((state) => state.editPosts.newText);
   const newImageUrl = useSelector((state) => state.editPosts.newImageUrl);
+  const newTag1 = useSelector((state) => state.editPosts.newTag1);
+  const newTag2 = useSelector((state) => state.editPosts.newTag2);
+  const newTag3 = useSelector((state) => state.editPosts.newTag3);
   const dispatch = useDispatch();
 
   const editPostHandler = (e) => {
@@ -45,12 +48,11 @@ function EditPost({ post, i }) {
       publishDate: Date.now(),
       owner: post.owner,
       comments: post.comments,
-      tags: post.tags,
+      tags: [newTag1, newTag2, newTag3],
     };
 
     const postDataCoppy = [...postsData];
     postDataCoppy[i] = newPost;
-    console.log(postDataCoppy);
     dispatch(savePosts(postDataCoppy));
   };
 
@@ -63,32 +65,54 @@ function EditPost({ post, i }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className="EditPost__box" sx={style}>
           <form onSubmit={(e) => editPostHandler(e)} className="EditPost__form">
             <h2>Edit Post</h2>
-            <div>
-              <TextField
-                onChange={(e) => dispatch(getNewId(e.target.value))}
-                id="outlined-basic"
-                label="ID"
-                variant="outlined"
-              />
-            </div>
-            <div>
-              <TextField
-                onChange={(e) => dispatch(getNewText(e.target.value))}
-                id="outlined-basic"
-                label="Text"
-                variant="outlined"
-              />
-            </div>
-            <div>
-              <TextField
-                onChange={(e) => dispatch(getNewImageUrl(e.target.value))}
-                id="outlined-basic"
-                label="Enter image url"
-                variant="outlined"
-              />
+            <div className="EditPost__formContainer">
+              <h4>Post Info</h4>
+              <div className="EditPost__formInfo">
+                <TextField
+                  onChange={(e) => dispatch(getNewId(e.target.value))}
+                  id="outlined-basic"
+                  label="ID"
+                  variant="outlined"
+                />
+
+                <TextField
+                  onChange={(e) => dispatch(getNewText(e.target.value))}
+                  id="outlined-basic"
+                  label="Text"
+                  variant="outlined"
+                />
+
+                <TextField
+                  onChange={(e) => dispatch(getNewImageUrl(e.target.value))}
+                  id="outlined-basic"
+                  label="Enter image url"
+                  variant="outlined"
+                />
+
+                <TextField
+                  onChange={(e) => dispatch(getNewTag1(e.target.value))}
+                  id="outlined-basic"
+                  label="Enter tag"
+                  variant="outlined"
+                />
+
+                <TextField
+                  onChange={(e) => dispatch(getNewTag2(e.target.value))}
+                  id="outlined-basic"
+                  label="Enter tag"
+                  variant="outlined"
+                />
+
+                <TextField
+                  onChange={(e) => dispatch(getNewTag3(e.target.value))}
+                  id="outlined-basic"
+                  label="Enter tag"
+                  variant="outlined"
+                />
+              </div>
             </div>
             <Button type="submit" variant="contained">
               EDIT

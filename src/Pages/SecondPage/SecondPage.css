@@ -110,3 +110,14 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .SecondPage__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px;
+  }
+  .SecondPage__card {
+    max-width: 100%;
+  }
+}

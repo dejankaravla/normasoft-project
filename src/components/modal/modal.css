@@ -62,3 +62,14 @@
   padding: 10px 20px;
   opacity: 0.5;
 }
+
+@media (max-width: 600px) {
+  .MuiBox-root {
+    max-width: 300px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
